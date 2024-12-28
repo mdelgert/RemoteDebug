@@ -39,7 +39,9 @@ extern "C" {
 #ifdef ESP8266
 #include <Hash.h>
 #elif defined(ESP32)
-#include <esp32/sha.h>
+//https://github.com/Links2004/arduinoWebSockets/issues/738
+//#include <esp32/sha.h>
+#include "sha/sha_parallel_engine.h"
 #else
 
 extern "C" {
