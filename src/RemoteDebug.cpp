@@ -1370,7 +1370,7 @@ void RemoteDebug::showHelp() {
 	}
 #endif
 	help.concat("\r\n");
-/*
+
 #ifndef WEBSOCKET_DISABLED // For web socket server (app)
 	if (!_connectedWS) {  // For telnet only
 		help.concat("****\r\n");
@@ -1382,7 +1382,7 @@ void RemoteDebug::showHelp() {
 		help.concat("****\r\n");
 	}
 #endif
-*/
+
 	help.concat("\r\n");
 	help.concat(
 			"* Please type the command and press enter to execute.(? or h for this help)\r\n");
