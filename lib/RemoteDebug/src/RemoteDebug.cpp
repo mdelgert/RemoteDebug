@@ -91,7 +91,7 @@
 
 ///// Defines
 
-#define VERSION "3.0.5"
+#define VERSION "3.0.6"
 
 ///// Includes
 
