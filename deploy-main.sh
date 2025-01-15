@@ -34,14 +34,14 @@
 # Example:
 # ./update-main.sh
 #
-# Author: Your Name
+# Author: Matthew Elgert
 # Last Updated: January 2025
 # --------------------------------------------------------
 
 set -e  # Exit on any error
 
 # Configurable variables
-LIBRARY_NAME="SimpleLibrary"  # Change this to the name of your library
+LIBRARY_NAME="RemoteDebug"  # Change this to the name of your library
 
 echo "Switching to dev branch..."
 git checkout dev
