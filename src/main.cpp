@@ -25,6 +25,7 @@ void setup()
 
     // Initialize RemoteDebug
     Debug.begin("ESP32_Debug");     // Set a friendly name for debugging
+    Debug.setSerialEnabled(true);   // Enable sending to serial debug as well (may want to disable it for release)
     Debug.setResetCmdEnabled(true); // Allow the reset command
     Debug.showTime(true);           // Show time in debug messages
     Debug.showProfiler(true);       // Enable profiler to measure execution time
@@ -36,16 +37,21 @@ void loop()
     // Handle RemoteDebug
     Debug.handle();
 
-    debugI("Remote Debug Version: %s", REMOTEDEBUG_VERSION);
-
     // Example debug messages
-    Debug.println("* This is a message of println");
-    Debug.printf("* This is a message of printf: %d\n", 123);
-    debugV("* This is a message of debug level VERBOSE");
-    debugD("* This is a message of debug level DEBUG");
-    debugI("* This is a message of debug level INFO");
-    debugW("* This is a message of debug level WARNING");
-    debugE("* This is a message of debug level ERROR");
+    static unsigned long lastMessage = 0;
 
-    delay(3000);
+    if (millis() - lastMessage > 5000)
+    {
+        lastMessage = millis();
+        //Debug.println("Sending a debug message...");
+        //Debug.printf("Uptime: %lu seconds\n", millis() / 1000);
+        //Debug.println("* This is a message of println");
+        //Debug.printf("* This is a message of printf: %d\n", 123);
+        debugI("Remote Debug Version: %s", REMOTEDEBUG_VERSION);
+        debugV("* This is a message of debug level VERBOSE");
+        debugD("* This is a message of debug level DEBUG");
+        debugI("* This is a message of debug level INFO");
+        debugW("* This is a message of debug level WARNING");
+        debugE("* This is a message of debug level ERROR");
+    }
 }
