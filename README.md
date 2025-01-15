@@ -1,3 +1,11 @@
+# RemoteDebug Library 2.0
+
+Based on the following forks.
+
+[PlummersSoftwareLLC](https://github.com/PlummersSoftwareLLC/RemoteDebug)
+
+[JoaoLopesF](https://github.com/JoaoLopesF/RemoteDebug)
+
 # RemoteDebug Library
 
 A library for Arduino to debug projects over WiFi, with web app or telnet client,
