@@ -1,6 +1,6 @@
-# RemoteDebug Library 2.0
+# RemoteDebug Library 3.0.6
 
-Based on the following forks.
+Based on the following forks supports esp32-s3 toolchain.
 
 [PlummersSoftwareLLC](https://github.com/PlummersSoftwareLLC/RemoteDebug)
 

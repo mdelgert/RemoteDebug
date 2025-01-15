@@ -1,10 +1,10 @@
 /*
  * Header for RemoteDebugWS
  *
- * Copyright (C) 2018  Joao Lopes
+ * Copyright (c) 2025 Matthew Elgert
  * MIT License
  *
- * Copyright (c) 2019 Joao Lopes https://github.com/JoaoLopesF/RemoteDebug
+ * Copyright (c) 2025 Matthew Elgert https://github.com/mdelgert/RemoteDebug
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
