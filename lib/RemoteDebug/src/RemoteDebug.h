@@ -40,6 +40,8 @@
 
 //////// Defines
 
+#define REMOTEDEBUG_VERSION "1.0.0"
+
 // New color system (comment this to return to old system) - 2019-02-27
 
 #define COLOR_NEW_SYSTEM true

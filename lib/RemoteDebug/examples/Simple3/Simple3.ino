@@ -1,9 +1,11 @@
 #include <WiFi.h>
 #include <RemoteDebug.h>
-#include "Secure.h"
 
 // RemoteDebug instance
 RemoteDebug Debug;
+
+const char *ssid = "Your_SSID";
+const char *password = "Your_PASSWORD";
 
 void setup()
 {
@@ -36,8 +38,6 @@ void loop()
     // Handle RemoteDebug
     Debug.handle();
 
-    debugI("Remote Debug Version: %s", REMOTEDEBUG_VERSION);
-
     // Example debug messages
     Debug.println("* This is a message of println");
     Debug.printf("* This is a message of printf: %d\n", 123);
@@ -46,6 +46,4 @@ void loop()
     debugI("* This is a message of debug level INFO");
     debugW("* This is a message of debug level WARNING");
     debugE("* This is a message of debug level ERROR");
-
-    delay(3000);
 }
