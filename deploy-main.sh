@@ -38,10 +38,10 @@
 # Last Updated: January 2025
 # --------------------------------------------------------
 
-set -e  # Exit on any error
+set -e # Exit on any error
 
 # Configurable variables
-LIBRARY_NAME="RemoteDebug"  # Change this to the name of your library
+LIBRARY_NAME="RemoteDebug" # Change this to the name of your library
 
 echo "Switching to dev branch..."
 git checkout dev
@@ -54,14 +54,18 @@ fi
 
 echo "Removing everything except files specified..."
 find . -mindepth 1 \
-  -name '.git' -prune -o \
-  -name 'README.md' -prune -o \
-  -name '.gitignore' -prune -o \
   -path './lib' -prune -o \
+  -name '.git' -prune -o \
+  -name '.gitignore' -prune -o \
+  -name 'LICENSE.txt' -prune -o \
+  -name 'README.md' -prune -o \
   -exec rm -rf {} +
 
 echo "Moving library contents to the root directory..."
-mv lib/"$LIBRARY_NAME"/* . || { echo "Error: Failed to move files from lib"; exit 1; }
+mv lib/"$LIBRARY_NAME"/* . || {
+  echo "Error: Failed to move files from lib"
+  exit 1
+}
 rm -rf lib
 
 echo "Staging and committing changes..."
