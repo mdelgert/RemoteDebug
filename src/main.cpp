@@ -1,6 +1,6 @@
 #include <WiFi.h>
 #include <RemoteDebug.h>
-#include "Secure.h"
+#include "SecureExample.h"
 
 // RemoteDebug instance
 RemoteDebug Debug;
